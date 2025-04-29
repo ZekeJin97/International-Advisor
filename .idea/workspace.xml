@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f13b60d4-2f8e-43a4-8779-4d5da5837e5d" name="Changes" comment="success return text">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="f13b60d4-2f8e-43a4-8779-4d5da5837e5d" name="Changes" comment="successfully return summarized answer from given doc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/Visa.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/Visa.pdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +39,6 @@
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2wHwXkZeFmMjKgqgKwxhv4v9XaF" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -84,8 +81,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-PY-243.23654.177" />
-        <option value="bundled-python-sdk-91d3a02ef49d-43b77aa2d136-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.23654.177" />
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-WS-251.23774.424" />
       </set>
     </attachedChunks>
   </component>
@@ -98,7 +94,8 @@
       <option name="presentableId" value="Default" />
       <updated>1745711848766</updated>
       <workItem from="1745711849825" duration="4130000" />
-      <workItem from="1745716711635" duration="2646000" />
+      <workItem from="1745716711635" duration="6601000" />
+      <workItem from="1745905053011" duration="61000" />
     </task>
     <task id="LOCAL-00001" summary="0">
       <option name="closed" value="true" />
@@ -116,7 +113,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745715562977</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="successfully return summarized answer from given doc">
+      <option name="closed" value="true" />
+      <created>1745719717655</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1745719717655</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +141,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="0" />
     <MESSAGE value="success return text" />
-    <option name="LAST_COMMIT_MESSAGE" value="success return text" />
+    <MESSAGE value="successfully return summarized answer from given doc" />
+    <option name="LAST_COMMIT_MESSAGE" value="successfully return summarized answer from given doc" />
   </component>
 </project>
