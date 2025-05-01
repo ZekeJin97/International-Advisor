@@ -1,6 +1,6 @@
 # StudyPath AI-Advisor: Multilingual GPT-4 Advisor for International Students
 
-tudyPath is a minimal but complete prototype of a multilingual Retrieval-Augmented Generation (RAG) system that helps international students navigate U.S. college admissions and visa policies. It combines FastAPI, FAISS, sentence-transformer embeddings, and OpenAI GPT-4, wrapped in a lightweight React frontend.
+StudyPath is a minimal but complete prototype of a multilingual Retrieval-Augmented Generation (RAG) system that helps international students navigate U.S. college admissions and visa policies. It combines FastAPI, FAISS, sentence-transformer embeddings, and OpenAI GPT-4, wrapped in a lightweight React frontend.
 
 💡 Features
 
