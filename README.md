@@ -20,7 +20,7 @@ StudyPath is a minimal but complete prototype of a multilingual Retrieval-Augmen
 
 Frontend: React + Next.js + Tailwind CSS
 
-Backend: FastAPI + pdfplumber + FAISS + Sentence-Transformer (MiniLM-L6-v2)
+Backend: main.py - FastAPI + pdfplumber + FAISS + Sentence-Transformer (MiniLM-L6-v2)
 
 LLM: OpenAI GPT-4 via openai.ChatCompletion
 
