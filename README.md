@@ -1,28 +1,40 @@
-# StudyPath AI-Advisor: Multilingual GPT-4 Advisor for International Students
+# StudyPath AI-Advisor 🧠📄  
+**Multilingual GPT-4-Powered RAG System for International Students**
 
-StudyPath is a minimal but complete prototype of a multilingual Retrieval-Augmented Generation (RAG) system that helps international students navigate U.S. college admissions and visa policies. It combines FastAPI, FAISS, sentence-transformer embeddings, and OpenAI GPT-4, wrapped in a lightweight React frontend.
+StudyPath is a multilingual Retrieval-Augmented Generation (RAG) system that helps international students navigate U.S. college admissions and visa policies. It supports scanned PDF documents like I-20s, extracts critical data via OCR, and uses GPT-4 to answer questions in natural language — all through a lightweight frontend.
 
-💡 Features
+![Demo Screenshot](./ScreenshotDEMO.png)
 
-✅ Upload PDF documents (e.g., I-20, F-1 visa guides)
+---
 
-🪀 Automatically chunk, embed, and index documents with FAISS
+## 💡 Features
 
-🧠 Ask questions in English, Spanish, or Mandarin Chinese
+✅ Upload scanned or digital PDFs (e.g., Form I-20, visa instructions, admission letters)  
+🧠 Automatically chunk, embed, and index documents with `sentence-transformers` + FAISS  
+🌍 Ask questions in English, Spanish, or Mandarin Chinese  
+🧾 Combines personal document context with global policy knowledge  
+💬 GPT-4 answers using hybrid document + background info  
+🧼 Document management with soft & hard delete endpoints  
+🧪 OCR fallback for scanned documents (via Tesseract)
 
-🌐 Uses GPT-4 to generate context-aware responses
+---
 
-⚖️ Soft and hard delete functionality for document management
+## 🧱 Stack
 
-✨ FastAPI backend + Next.js frontend with Tailwind UI
+**Frontend:**  
+- React + Next.js  
+- Tailwind CSS
 
-🪧 Stack
+**Backend:**  
+- FastAPI  
+- pdfplumber + pytesseract (OCR)  
+- FAISS + Sentence-Transformers (MiniLM-L6-v2)  
+- OpenAI API
 
-Frontend: React + Next.js + Tailwind CSS
+**Infra:**  
+- Local dev only (privacy-conscious, no cloud storage)  
+- Works offline after embedding (chat still uses OpenAI)
 
-Backend: main.py - FastAPI + pdfplumber + FAISS + Sentence-Transformer (MiniLM-L6-v2)
+---
 
-LLM: OpenAI GPT-4 via openai.ChatCompletion
-
-Infra: Local dev only for now (privacy-conscious)
 
