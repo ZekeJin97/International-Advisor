@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f13b60d4-2f8e-43a4-8779-4d5da5837e5d" name="Changes" comment="automated embedding upon upload">
+    <list default="true" id="f13b60d4-2f8e-43a4-8779-4d5da5837e5d" name="Changes" comment="enabled answers specific to the uploaded doc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/studypath-frontend/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/studypath-frontend/src/app/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +34,9 @@
     &quot;accountId&quot;: &quot;dca3238f-62ff-4ea5-a61a-88d64eda08ed&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -103,7 +104,7 @@
       <workItem from="1745996715061" duration="6336000" />
       <workItem from="1746067235478" duration="2470000" />
       <workItem from="1746505926677" duration="588000" />
-      <workItem from="1747671404216" duration="5046000" />
+      <workItem from="1747671404216" duration="6687000" />
     </task>
     <task id="LOCAL-00001" summary="0">
       <option name="closed" value="true" />
@@ -145,7 +146,23 @@
       <option name="project" value="LOCAL" />
       <updated>1746070614045</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="automated embedding upon upload">
+      <option name="closed" value="true" />
+      <created>1747711355777</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1747711355777</updated>
+    </task>
+    <task id="LOCAL-00007" summary="enabled answers specific to the uploaded doc">
+      <option name="closed" value="true" />
+      <created>1747717787909</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1747717787909</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,6 +184,7 @@
     <MESSAGE value="success return text" />
     <MESSAGE value="successfully return summarized answer from given doc" />
     <MESSAGE value="automated embedding upon upload" />
-    <option name="LAST_COMMIT_MESSAGE" value="automated embedding upon upload" />
+    <MESSAGE value="enabled answers specific to the uploaded doc" />
+    <option name="LAST_COMMIT_MESSAGE" value="enabled answers specific to the uploaded doc" />
   </component>
 </project>

@@ -1,0 +1,115 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"f13b60d4-2f8e-43a4-8779-4d5da5837e5d\" name=\"Changes\" comment=\"automated embedding upon upload\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/main.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/main.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/studypath-frontend/src/app/page.tsx\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/studypath-frontend/src/app/page.tsx\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Python Script\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;ZekeJin97&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/ZekeJin97/study-path-backend.git&quot;,\r\n    &quot;accountId&quot;: &quot;dca3238f-62ff-4ea5-a61a-88d64eda08ed&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 0\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2wHwXkZeFmMjKgqgKwxhv4v9XaF\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;Shell Script.Unnamed.executor&quot;: &quot;Run&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;master&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/swift/PycharmProjects/study-path-backend/main.py&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,\r\n    &quot;ts.external.directory.path&quot;: &quot;C:\\\\Users\\\\swift\\\\PycharmProjects\\\\study-path-backend\\\\studypath-frontend\\\\node_modules\\\\typescript\\\\lib&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"Unnamed\" type=\"ShConfigurationType\" nameIsGenerated=\"true\">\r\n      <option name=\"SCRIPT_TEXT\" value=\"uvicorn main:app --reload\" />\r\n      <option name=\"INDEPENDENT_SCRIPT_PATH\" value=\"true\" />\r\n      <option name=\"SCRIPT_PATH\" value=\"\" />\r\n      <option name=\"SCRIPT_OPTIONS\" value=\"\" />\r\n      <option name=\"INDEPENDENT_SCRIPT_WORKING_DIRECTORY\" value=\"true\" />\r\n      <option name=\"SCRIPT_WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\" />\r\n      <option name=\"INDEPENDENT_INTERPRETER_PATH\" value=\"true\" />\r\n      <option name=\"INTERPRETER_PATH\" value=\"powershell.exe\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"EXECUTE_IN_TERMINAL\" value=\"true\" />\r\n      <option name=\"EXECUTE_SCRIPT_FILE\" value=\"false\" />\r\n      <envs />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-PY-243.23654.177\" />\r\n        <option value=\"bundled-python-sdk-91d3a02ef49d-43b77aa2d136-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.23654.177\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"f13b60d4-2f8e-43a4-8779-4d5da5837e5d\" name=\"Changes\" comment=\"\" />\r\n      <created>1745711848766</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1745711848766</updated>\r\n      <workItem from=\"1745711849825\" duration=\"4130000\" />\r\n      <workItem from=\"1745716711635\" duration=\"6601000\" />\r\n      <workItem from=\"1745905053011\" duration=\"61000\" />\r\n      <workItem from=\"1745905289673\" duration=\"649000\" />\r\n      <workItem from=\"1745996715061\" duration=\"6336000\" />\r\n      <workItem from=\"1746067235478\" duration=\"2470000\" />\r\n      <workItem from=\"1746505926677\" duration=\"588000\" />\r\n      <workItem from=\"1747671404216\" duration=\"5046000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"0\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1745712015645</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1745712015645</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"success return text\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1745715562977</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1745715562977</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"successfully return summarized answer from given doc\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1745719717655</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1745719717655</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"automated embedding upon upload\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1745905340176</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1745905340176</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"automated embedding upon upload\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1746070614045</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1746070614045</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"6\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"0\" />\r\n    <MESSAGE value=\"success return text\" />\r\n    <MESSAGE value=\"successfully return summarized answer from given doc\" />\r\n    <MESSAGE value=\"automated embedding upon upload\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"automated embedding upon upload\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision bbf18b151938b2fdce80dec8a16fbd9b622badff)
++++ b/.idea/workspace.xml	(date 1747711445671)
+@@ -4,10 +4,64 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="f13b60d4-2f8e-43a4-8779-4d5da5837e5d" name="Changes" comment="automated embedding upon upload">
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/studypath-frontend/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/studypath-frontend/src/app/page.tsx" afterDir="false" />
++    <list default="true" id="f13b60d4-2f8e-43a4-8779-4d5da5837e5d" name="Changes" comment="enabled answers specific to the uploaded doc">
++      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/chunks/F-1-Student-Visa-and-Arrival-Information_chunks.jsonl" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/chunks/f1-travel-visa-guide_chunks.jsonl" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/studypath-frontend/.gitignore" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/studypath-frontend/README.md" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/studypath-frontend/eslint.config.mjs" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/studypath-frontend/next.config.ts" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/studypath-frontend/package-lock.json" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/studypath-frontend/package.json" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/studypath-frontend/postcss.config.mjs" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/studypath-frontend/public/file.svg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/studypath-frontend/public/globe.svg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/studypath-frontend/public/next.svg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/studypath-frontend/public/vercel.svg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/studypath-frontend/public/window.svg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/studypath-frontend/src/app/favicon.ico" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/studypath-frontend/src/app/globals.css" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/studypath-frontend/src/app/layout.tsx" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/studypath-frontend/tsconfig.json" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/uploads/050b6c6b-09f8-4217-af5c-97c5abd42fd9_i20.pdf" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/uploads/056ca3cb-33cf-4922-b249-b8d1e126a98a_i20.pdf" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/uploads/1cf05d6b-0736-4a92-a9b9-4e7e3fa87dcb_i20.pdf" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/uploads/2cc7ad50-2e61-4a5b-8c54-fcff353777ce_i20.pdf" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/uploads/392dfddc-6888-46ef-bbc5-e09f06d7332f_i20.pdf" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/uploads/3dba762a-ad6a-4ea3-921b-bfbb187956fa_i20.pdf" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/uploads/5f0f5ead-63cb-46d4-b2ed-1a17d2b9b450_i20.pdf" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/uploads/69363527-a2c0-4014-aefa-99ea88f43a72_i20.pdf" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/uploads/6e671638-bf39-4f41-8884-519409e2eb83_i20 deadline.pdf" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/uploads/F-1-Student-Visa-and-Arrival-Information.pdf" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/uploads/OPT Practical Training.pdf" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/uploads/SEVP_International Student Life cycle_Oct 2015.pdf" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/uploads/b0c5f0a8-d018-4c10-b85f-af23b116e427_i20.pdf" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/uploads/bb39fb02-0cf8-40bc-abc0-8bf6b41b0caa_i20.pdf" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/uploads/c432bfad-3114-456a-b8ea-02d88520a650_i20.pdf" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/uploads/c8bb7e3a-dfbe-4cbc-938d-cd311e24d353_i20.pdf" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/uploads/ce7bba83-ae1d-43f3-955d-7aec21a5b0d5_i20.pdf" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/uploads/i20.pdf" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/uploads/isa-isss-handbook.pdf" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/uploads/maintaining-f-1-status.pdf" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/vectorstores/050b6c6b-09f8-4217-af5c-97c5abd42fd9.index" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/vectorstores/050b6c6b-09f8-4217-af5c-97c5abd42fd9.json" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/vectorstores/5f0f5ead-63cb-46d4-b2ed-1a17d2b9b450.index" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/vectorstores/5f0f5ead-63cb-46d4-b2ed-1a17d2b9b450.json" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/vectorstores/69363527-a2c0-4014-aefa-99ea88f43a72.index" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/vectorstores/69363527-a2c0-4014-aefa-99ea88f43a72.json" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/vectorstores/6e671638-bf39-4f41-8884-519409e2eb83.index" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/vectorstores/6e671638-bf39-4f41-8884-519409e2eb83.json" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/vectorstores/F-1-Student-Visa-and-Arrival-Information.index" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/vectorstores/bb39fb02-0cf8-40bc-abc0-8bf6b41b0caa.index" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/vectorstores/bb39fb02-0cf8-40bc-abc0-8bf6b41b0caa.json" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/vectorstores/c8bb7e3a-dfbe-4cbc-938d-cd311e24d353.index" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/vectorstores/c8bb7e3a-dfbe-4cbc-938d-cd311e24d353.json" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/vectorstores/ce7bba83-ae1d-43f3-955d-7aec21a5b0d5.index" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/vectorstores/ce7bba83-ae1d-43f3-955d-7aec21a5b0d5.json" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/vectorstores/f1-travel-visa-guide.index" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/vectorstores/global.index" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/vectorstores/metadata.json" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -103,7 +157,7 @@
+       <workItem from="1745996715061" duration="6336000" />
+       <workItem from="1746067235478" duration="2470000" />
+       <workItem from="1746505926677" duration="588000" />
+-      <workItem from="1747671404216" duration="5046000" />
++      <workItem from="1747671404216" duration="6043000" />
+     </task>
+     <task id="LOCAL-00001" summary="0">
+       <option name="closed" value="true" />
+@@ -145,7 +199,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1746070614045</updated>
+     </task>
+-    <option name="localTasksCounter" value="6" />
++    <task id="LOCAL-00006" summary="automated embedding upon upload">
++      <option name="closed" value="true" />
++      <created>1747711355777</created>
++      <option name="number" value="00006" />
++      <option name="presentableId" value="LOCAL-00006" />
++      <option name="project" value="LOCAL" />
++      <updated>1747711355777</updated>
++    </task>
++    <option name="localTasksCounter" value="7" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -167,6 +229,7 @@
+     <MESSAGE value="success return text" />
+     <MESSAGE value="successfully return summarized answer from given doc" />
+     <MESSAGE value="automated embedding upon upload" />
+-    <option name="LAST_COMMIT_MESSAGE" value="automated embedding upon upload" />
++    <MESSAGE value="enabled answers specific to the uploaded doc" />
++    <option name="LAST_COMMIT_MESSAGE" value="enabled answers specific to the uploaded doc" />
+   </component>
+ </project>
+\ No newline at end of file
