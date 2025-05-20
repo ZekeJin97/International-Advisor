@@ -31,10 +31,4 @@ StudyPath is a multilingual Retrieval-Augmented Generation (RAG) system that hel
 - FAISS + Sentence-Transformers (MiniLM-L6-v2)  
 - OpenAI API
 
-**Infra:**  
-- Local dev only (privacy-conscious, no cloud storage)  
-- Works offline after embedding (chat still uses OpenAI)
-
----
-
 

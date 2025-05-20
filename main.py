@@ -13,12 +13,17 @@ import numpy as np
 from dotenv import load_dotenv
 import psutil
 from datetime import datetime
+import uuid
+import pytesseract
+from PIL import Image
+import io
+
+pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
 load_dotenv()
 
 app = FastAPI()
 
-# Middleware
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -27,7 +32,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Configs
 UPLOAD_DIR = "uploads"
 CHUNKS_DIR = "chunks"
 VECTOR_DIR = "vectorstores"
@@ -42,23 +46,16 @@ EMBED_MODEL_NAME = "all-MiniLM-L6-v2"
 model = SentenceTransformer(EMBED_MODEL_NAME)
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-# Load/create FAISS index
-if os.path.exists(GLOBAL_INDEX_PATH):
-    index = faiss.read_index(GLOBAL_INDEX_PATH)
-else:
-    index = faiss.IndexFlatL2(384)
+global_index = faiss.read_index(GLOBAL_INDEX_PATH) if os.path.exists(GLOBAL_INDEX_PATH) else faiss.IndexFlatL2(384)
 
-# Load/create metadata
 if os.path.exists(METADATA_PATH):
     with open(METADATA_PATH, "r", encoding="utf-8") as f:
         metadata_store = json.load(f)
 else:
     metadata_store = {}
 
-# --- UTILS ---
-
 def save_faiss():
-    faiss.write_index(index, GLOBAL_INDEX_PATH)
+    faiss.write_index(global_index, GLOBAL_INDEX_PATH)
 
 def save_metadata():
     with open(METADATA_PATH, "w", encoding="utf-8") as f:
@@ -91,11 +88,9 @@ def truncate_texts(texts: List[str], max_tokens=2000):
         total += tokens
     return output
 
-# --- API ---
-
 @app.get("/")
 async def root():
-    return {"message": "StudyPath Backend v2.6 is alive! 🧠"}
+    return {"message": "StudyPath Backend v3.0 is alive! 🧠"}
 
 @app.get("/languages/")
 async def list_languages():
@@ -109,75 +104,123 @@ async def list_languages():
 
 @app.post("/upload/")
 async def upload_and_ingest(file: UploadFile = File(...)):
-    file_location = os.path.join(UPLOAD_DIR, file.filename)
-    with open(file_location, "wb+") as f:
-        f.write(await file.read())
+    print("🔥 /upload/ endpoint triggered")
+
+    if not file:
+        print("❌ No file received!")
+        raise HTTPException(status_code=400, detail="No file uploaded.")
+
+    print(f"📄 Received file: {file.filename}")
+
+    file_id = str(uuid.uuid4())
+    file_location = os.path.join(UPLOAD_DIR, f"{file_id}_{file.filename}")
+
+    try:
+        contents = await file.read()
+        print(f"📦 File size received: {len(contents)} bytes")
+        with open(file_location, "wb") as f_out:
+            f_out.write(contents)
+    except Exception as e:
+        print(f"❌ Failed writing file: {e}")
+        raise HTTPException(status_code=500, detail="File save failed")
 
     chunks = []
-    with pdfplumber.open(file_location) as pdf:
-        for page in pdf.pages:
-            text = page.extract_text()
-            if text:
-                chunks.extend(chunk_text(text))
+    try:
+        with pdfplumber.open(file_location) as pdf:
+            print(f"📚 PDF has {len(pdf.pages)} page(s)")
+            for i, page in enumerate(pdf.pages):
+                text = page.extract_text()
+                if not text:
+                    print(f"🔍 Page {i + 1} has no text — running OCR")
+                    pil_stream = io.BytesIO()
+                    page.to_image(resolution=300).save(pil_stream, format="PNG")
+                    pil_stream.seek(0)
+                    pil_image = Image.open(pil_stream)
+                    text = pytesseract.image_to_string(pil_image)
+                else:
+                    print(f"📃 Page {i + 1}: {len(text)} characters (text layer)")
+                if text:
+                    chunks.extend(chunk_text(text))
+                    for c in chunk_text(text):
+                        print("🧾", c[:300])
+
+
+    except Exception as e:
+        print(f"💥 PDF processing error: {e}")
+        raise HTTPException(status_code=400, detail="Error reading PDF")
 
     if not chunks:
+        print("⚠️ No chunks extracted from the PDF")
         raise HTTPException(status_code=400, detail="No readable text found")
 
+    print(f"✅ Extracted {len(chunks)} chunks")
+
     embeddings = batch_encode(chunks)
-    current_count = len(metadata_store)
+    doc_index = faiss.IndexFlatL2(384)
+    doc_index.add(embeddings)
+    faiss.write_index(doc_index, os.path.join(VECTOR_DIR, f"{file_id}.index"))
 
-    index.add(embeddings)
-
-    uploaded_at = datetime.now().isoformat()
-
-    for i, chunk_text_data in enumerate(chunks):
-        metadata_store[str(current_count + i)] = {
+    doc_metadata = {
+        str(i): {
+            "content": chunk,
             "source": file.filename,
-            "content": chunk_text_data,
-            "uploaded_at": uploaded_at,
+            "uploaded_at": datetime.now().isoformat()
+        } for i, chunk in enumerate(chunks)
+    }
+
+    with open(os.path.join(VECTOR_DIR, f"{file_id}.json"), "w", encoding="utf-8") as f:
+        json.dump(doc_metadata, f, ensure_ascii=False, indent=2)
+
+    global_index.add(embeddings)
+    for i, chunk in enumerate(chunks):
+        metadata_store[str(len(metadata_store) + i)] = {
+            "source": file.filename,
+            "content": chunk,
+            "uploaded_at": datetime.now().isoformat(),
             "deleted": False
         }
 
     save_faiss()
     save_metadata()
 
-    return JSONResponse(content={"message": f"Uploaded, processed, and embedded {len(chunks)} chunks from {file.filename}"})
+    print("✅ Upload and processing complete")
+    return {"message": "Upload complete", "document_id": file_id}
 
 class QueryRequest(BaseModel):
     question: str
+    document_id: str = None
     top_k: int = 3
     language: str = "en"
 
 @app.post("/ask/")
 async def ask_question(req: QueryRequest):
-    if index.ntotal == 0:
-        raise HTTPException(status_code=400, detail="Vectorstore is empty")
+    chunks = []
 
-    valid_languages = ["en", "es", "zh-cn"]
-    if req.language not in valid_languages:
-        raise HTTPException(status_code=400, detail=f"Invalid language '{req.language}'. Must be one of {valid_languages}")
+    if req.document_id:
+        index_path = os.path.join(VECTOR_DIR, f"{req.document_id}.index")
+        meta_path = os.path.join(VECTOR_DIR, f"{req.document_id}.json")
 
-    question_embedding = model.encode([req.question])
-    D, I = index.search(np.array(question_embedding), req.top_k)
+        if os.path.exists(index_path) and os.path.exists(meta_path):
+            user_index = faiss.read_index(index_path)
+            with open(meta_path, "r", encoding="utf-8") as f:
+                user_meta = json.load(f)
+            D_user, I_user = user_index.search(model.encode([req.question]), req.top_k)
+            chunks += [user_meta[str(i)]["content"] for i in I_user[0] if str(i) in user_meta]
 
-    retrieved = []
-    for idx in I[0]:
-        meta = metadata_store.get(str(idx))
-        if meta and not meta.get("deleted", False):
-            retrieved.append(meta)
+    global_meta = {k: v for k, v in metadata_store.items() if not v.get("deleted", False)}
+    D_global, I_global = global_index.search(model.encode([req.question]), req.top_k)
+    chunks += [global_meta[str(i)]["content"] for i in I_global[0] if str(i) in global_meta]
 
-    if not retrieved:
-        raise HTTPException(status_code=404, detail="No relevant chunks found")
+    if not chunks:
+        raise HTTPException(status_code=404, detail="No relevant context found")
 
-    context_chunks = [r["content"] for r in retrieved]
-    context = "\n\n".join(truncate_texts(context_chunks))
-
-    prompt = f"Use the following context to answer the user's question:\n\n{context}\n\nQuestion: {req.question}\nAnswer:"
+    context = "\n\n".join(truncate_texts(chunks))
+    prompt = f"Use the following context (which may include both a user's personal document and general knowledge) to answer the user's question:\n\n{context}\n\nQuestion: {req.question}\nAnswer:"
 
     if req.language == "es":
-        prompt += "\n(Respond in Spanish)"
+        prompt += "\n(Responde en español)"
     elif req.language == "zh-cn":
-        prompt += "\n(Respond in Simplified Chinese)"
+        prompt += "\n(用简体中文回答)"
 
     response = openai.ChatCompletion.create(
         model="gpt-4",
@@ -187,10 +230,7 @@ async def ask_question(req: QueryRequest):
         ]
     )
 
-    final_answer = response['choices'][0]['message']['content']
-    sources = list(set([r["source"] for r in retrieved]))
-
-    return JSONResponse(content={"answer": final_answer, "sources": sources})
+    return {"answer": response['choices'][0]['message']['content']}
 
 @app.get("/list_documents/")
 async def list_documents():
@@ -231,7 +271,7 @@ async def stats():
     return {
         "total_documents": total_docs,
         "total_chunks": total_chunks,
-        "vectorstore_size": index.ntotal
+        "vectorstore_size": global_index.ntotal
     }
 
 @app.get("/health/")
