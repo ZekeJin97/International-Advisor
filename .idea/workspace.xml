@@ -4,27 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f13b60d4-2f8e-43a4-8779-4d5da5837e5d" name="Changes" comment="automated embedding upon upload">
-      <change afterPath="$PROJECT_DIR$/main_langchain.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studypath-frontend/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studypath-frontend/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studypath-frontend/eslint.config.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studypath-frontend/next.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studypath-frontend/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studypath-frontend/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studypath-frontend/postcss.config.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studypath-frontend/public/file.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studypath-frontend/public/globe.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studypath-frontend/public/next.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studypath-frontend/public/vercel.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studypath-frontend/public/window.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studypath-frontend/src/app/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studypath-frontend/src/app/globals.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studypath-frontend/src/app/layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studypath-frontend/src/app/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studypath-frontend/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f13b60d4-2f8e-43a4-8779-4d5da5837e5d" name="Changes" comment="langchain version backend functioning" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -127,7 +107,7 @@
       <workItem from="1745996715061" duration="6336000" />
       <workItem from="1746067235478" duration="2470000" />
       <workItem from="1747676748882" duration="243000" />
-      <workItem from="1747734516762" duration="6365000" />
+      <workItem from="1747734516762" duration="6756000" />
     </task>
     <task id="LOCAL-00001" summary="0">
       <option name="closed" value="true" />
@@ -161,7 +141,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745905340176</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="langchain version backend functioning">
+      <option name="closed" value="true" />
+      <created>1747741714246</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1747741714246</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,6 +171,7 @@
     <MESSAGE value="success return text" />
     <MESSAGE value="successfully return summarized answer from given doc" />
     <MESSAGE value="automated embedding upon upload" />
-    <option name="LAST_COMMIT_MESSAGE" value="automated embedding upon upload" />
+    <MESSAGE value="langchain version backend functioning" />
+    <option name="LAST_COMMIT_MESSAGE" value="langchain version backend functioning" />
   </component>
 </project>
