@@ -5,8 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f13b60d4-2f8e-43a4-8779-4d5da5837e5d" name="Changes" comment="automated embedding upon upload">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/study-path-backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AI-Advisor.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main_langchain.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studypath-frontend/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studypath-frontend/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studypath-frontend/eslint.config.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studypath-frontend/next.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studypath-frontend/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studypath-frontend/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studypath-frontend/postcss.config.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studypath-frontend/public/file.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studypath-frontend/public/globe.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studypath-frontend/public/next.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studypath-frontend/public/vercel.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studypath-frontend/public/window.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studypath-frontend/src/app/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studypath-frontend/src/app/globals.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studypath-frontend/src/app/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studypath-frontend/src/app/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studypath-frontend/tsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +48,7 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/ZekeJin97/study-path-backend.git&quot;,
+    &quot;url&quot;: &quot;https://github.com/ZekeJin97/International-Advisor&quot;,
     &quot;accountId&quot;: &quot;dca3238f-62ff-4ea5-a61a-88d64eda08ed&quot;
   }
 }</component>
@@ -40,6 +56,9 @@
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2wHwXkZeFmMjKgqgKwxhv4v9XaF" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -52,7 +71,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;Shell Script.Unnamed.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/swift/PycharmProjects/study-path-backend/main.py&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/swift/Downloads/CS5330_Su25_Group4-main/CS5330_Su25_Group4-main/mini-project4&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -63,6 +82,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\swift\PycharmProjects\International-Advisor" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Unnamed" type="ShConfigurationType" nameIsGenerated="true">
       <option name="SCRIPT_TEXT" value="uvicorn main:app --reload" />
@@ -102,6 +126,8 @@
       <workItem from="1745905289673" duration="649000" />
       <workItem from="1745996715061" duration="6336000" />
       <workItem from="1746067235478" duration="2470000" />
+      <workItem from="1747676748882" duration="243000" />
+      <workItem from="1747734516762" duration="6365000" />
     </task>
     <task id="LOCAL-00001" summary="0">
       <option name="closed" value="true" />
