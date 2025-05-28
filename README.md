@@ -8,7 +8,7 @@ StudyPath is a multilingual Retrieval-Augmented Generation (RAG) system that hel
 ---
 
 ## 💡 Features
-
+**
 ✅ Upload scanned or digital PDFs (e.g., Form I-20, visa instructions, admission letters)  
 🧠 Automatically chunk, embed, and index documents with `sentence-transformers` + FAISS  
 🌍 Ask questions in English, Spanish, or Mandarin Chinese  
@@ -16,6 +16,7 @@ StudyPath is a multilingual Retrieval-Augmented Generation (RAG) system that hel
 💬 GPT-4 answers using hybrid document + background info  
 🧼 Document management with soft & hard delete endpoints  
 🧪 OCR fallback for scanned documents (via Tesseract)
+**
 ---
 
 ## 🧱 Stack
