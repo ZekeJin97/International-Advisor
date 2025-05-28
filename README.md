@@ -16,6 +16,7 @@ StudyPath is a multilingual Retrieval-Augmented Generation (RAG) system that hel
 💬 GPT-4 answers using hybrid document + background info  
 🧼 Document management with soft & hard delete endpoints  
 🧪 OCR fallback for scanned documents (via Tesseract)
+🔄 Easily extensible to other document-heavy domains (e.g., immigration, healthcare, legal aid) with minimal changes
 
 ---
 
