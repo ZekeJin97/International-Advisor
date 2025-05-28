@@ -30,5 +30,5 @@ StudyPath is a multilingual Retrieval-Augmented Generation (RAG) system that hel
 - pdfplumber + pytesseract (OCR)  
 - FAISS + Sentence-Transformers (MiniLM-L6-v2)  
 - OpenAI API
-
+- LangChain
 
