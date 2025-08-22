@@ -1,24 +1,25 @@
 # Core FastAPI and server
-fastapi==0.104.1
-uvicorn[standard]==0.24.0
+fastapi
+uvicorn[standard]
 
-# LangChain and OpenAI
-langchain-openai==0.1.7
-langchain-community==0.2.4
-openai==1.35.13
+# LangChain - let pip resolve compatible versions
+langchain
+langchain-openai
+langchain-community
+openai
 
 # Vector database and embeddings
-faiss-cpu==1.7.4
+faiss-cpu
 
 # PDF processing and OCR
-pdfplumber==0.10.0
-pytesseract==0.3.10
-Pillow==10.0.1
+pdfplumber
+pytesseract
+Pillow
 
 # Utilities
-python-dotenv==1.0.0
-psutil==5.9.6
+python-dotenv
+psutil
 
 # Additional dependencies
-pydantic==2.4.2
-python-multipart==0.0.6
+pydantic
+python-multipart
