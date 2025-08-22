@@ -1,7 +1,7 @@
 // src/app/components/FileUpload.tsx
 'use client';
 import React, { useState } from 'react';
-import { Upload, FileText, CheckCircle } from 'lucide-react';
+import { Upload, CheckCircle } from 'lucide-react';
 
 interface FileUploadProps {
   onFileSelect: (file: File) => void;

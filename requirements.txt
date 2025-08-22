@@ -12,6 +12,7 @@ openai
 faiss-cpu
 
 # PDF processing and OCR
+pypdf
 pdfplumber
 pytesseract
 Pillow

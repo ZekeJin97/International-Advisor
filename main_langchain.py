@@ -198,9 +198,8 @@ def save_doc_map(doc_map):
 # ═══════════════════════════════════════════════════════════════════════════════════════
 # OCR FUNCTIONS
 # ═══════════════════════════════════════════════════════════════════════════════════════
-
 def extract_with_ocr(file_path):
-    """Enhanced OCR with better preprocessing for cloud deployment"""
+    """Enhanced OCR with better error handling for cloud deployment"""
     logger.info(f"Starting OCR extraction for: {file_path}")
     text = ""
 
@@ -218,10 +217,10 @@ def extract_with_ocr(file_path):
                     pil_image = pil_image.convert("L")
                     pil_image = pil_image.point(lambda x: 0 if x < 160 else 255, '1')
 
-                    # OCR with optimized config for cloud
+                    # OCR with simplified config for cloud
                     page_text = pytesseract.image_to_string(
                         pil_image,
-                        config="--psm 6 -c tessedit_char_whitelist=0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz.,;:!?()[]{}\"'-+="
+                        config="--psm 6"  # Simplified config
                     )
 
                     if page_text.strip():
@@ -230,14 +229,15 @@ def extract_with_ocr(file_path):
 
                 except Exception as e:
                     logger.warning(f"OCR failed for page {page_num + 1}: {e}")
+                    # Continue to next page instead of failing completely
                     continue
 
     except Exception as e:
         logger.error(f"OCR extraction failed: {e}")
-        raise StudyPathException(f"OCR processing failed: {str(e)}", 500)
+        # Don't raise exception, return empty text and let PyPDF try
+        return ""
 
     return text
-
 
 # ═══════════════════════════════════════════════════════════════════════════════════════
 # CHUNKING - OPTIMIZED FOR CLOUD

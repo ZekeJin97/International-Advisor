@@ -26,8 +26,8 @@ export default function ResponseDisplay({
       await navigator.clipboard.writeText(response);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
-    } catch (err) {
-      console.error('Failed to copy text');
+    } catch (error) {
+      console.error('Failed to copy text:', error);
     }
   };
 

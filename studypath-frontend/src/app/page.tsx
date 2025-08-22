@@ -6,6 +6,16 @@ import FileUpload from './components/FileUpload';
 import QuestionInput from './components/QuestionInput';
 import ResponseDisplay from './components/ResponseDisplay';
 
+// Use environment variable for API URL
+const API_URL = "https://studypath-backend-131783364319.us-central1.run.app";
+
+interface APIPayload {
+  question: string;
+  top_k: number;
+  language: string;
+  document_id?: string;
+}
+
 export default function HomePage() {
   const [file, setFile] = useState<File | null>(null);
   const [uploading, setUploading] = useState(false);
@@ -27,19 +37,24 @@ export default function HomePage() {
       const formData = new FormData();
       formData.append("file", selectedFile);
 
-      const res = await fetch("http://127.0.0.1:8000/upload/", {
+      const res = await fetch(`${API_URL}/upload/`, {
         method: "POST",
         body: formData,
       });
 
+      if (!res.ok) {
+        throw new Error(`Upload failed: ${res.status} ${res.statusText}`);
+      }
+
       const data = await res.json();
       setDocId(data.document_id || data.doc_id);
-      
+
       // You could show a success notification here
       console.log("Upload successful:", data.message);
     } catch (err) {
       console.error("Upload failed:", err);
       // You could show an error notification here
+      alert("Upload failed. Please try again.");
     } finally {
       setUploading(false);
     }
@@ -47,25 +62,29 @@ export default function HomePage() {
 
   const handleAskQuestion = async () => {
     if (!question.trim()) return;
-    
+
     setIsAsking(true);
     const startTime = Date.now();
 
     try {
-      const payload: Record<string, any> = {
+      const payload: APIPayload = {
         question,
         top_k: 3,
         language,
       };
       if (docId) payload.document_id = docId;
 
-      const res = await fetch("http://127.0.0.1:8000/ask/", {
+      const res = await fetch(`${API_URL}/ask/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(payload),
       });
+
+      if (!res.ok) {
+        throw new Error(`Question failed: ${res.status} ${res.statusText}`);
+      }
 
       const data = await res.json();
       setResponse(data.answer || "No response received.");
@@ -93,7 +112,7 @@ export default function HomePage() {
             </div>
             <span className="text-xl font-bold text-white">StudyPath</span>
           </div>
-          
+
           <div className="flex items-center gap-4">
             <button className="p-2 text-gray-400 hover:text-white rounded-lg hover:bg-white/10 transition-colors">
               <Settings className="w-5 h-5" />
@@ -125,7 +144,7 @@ export default function HomePage() {
       {/* Main Content */}
       <div className="max-w-4xl mx-auto px-6 pb-16">
         {/* File Upload */}
-        <FileUpload 
+        <FileUpload
           onFileSelect={handleFileSelect}
           selectedFile={file}
           isUploading={uploading}
@@ -156,8 +175,12 @@ export default function HomePage() {
       <footer className="border-t border-white/10 bg-black/20 backdrop-blur-xl">
         <div className="max-w-4xl mx-auto px-6 py-8 text-center">
           <p className="text-gray-400 text-sm">
-            Powered by AI • Built for International Students • 
+            Powered by AI • Built for International Students •
             <span className="text-purple-400 ml-1">StudyPath v2.0</span>
+          </p>
+          {/* Debug info - remove in production */}
+          <p className="text-xs text-gray-500 mt-2">
+            API: {API_URL}
           </p>
         </div>
       </footer>
